@@ -39,8 +39,27 @@
 
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
-          <h3>What is it for?</h3>
-          <p>Dealing with package versions in <a href="http://golang.org/" target="_blank">Go</a> is hard.</p> Being able to use tags and branches on <a href="http://github.com/" target="_blank">GitHub</a> would make every thing much easier. Unfortunately <kbd>go get</kbd> doesn't like git branches or tags.
+          <h3>The problem</h3>
+          <p>Dealing with package versions in <a href="http://golang.org/" target="_blank">Go</a> is hard.</p>
+          <p>Being able to use tags and branches on <a href="http://github.com/" target="_blank">GitHub</a> would make every thing much easier. Unfortunately <kbd>go get</kbd> doesn't work well with git branches and tags.</p>
+          <h3>The solution</h3>
+          <p>gopkg.cc exposes each branch and tag in a GitHub repository at a separate package path.</p>
+
+          <p>Package paths are formatted like this</p>
+          <pre><code>gopkg.cc/[user]/[repository]/[tag]
+gopkg.cc/[user]/[repository]/[tag]/subpackage
+gopkg.cc/[user]/[repository]/[branch]
+gopkg.cc/[user]/[repository]/[branch]/subpackage</code></pre>
+
+          <p>As a result <a href="https://github.com/codegangsta/martini/tree/v0.1" target="_blank">Martini v0.1</a> can be imported like this:</p>
+          <pre><code>import "gopkg.cc/codegangsta/martini/v0.1"</code></pre>
+          <p>And can be used in the usual way</p>
+          <pre><code>func main() {
+  martini.Classic().Run()
+}</code></pre>
+
+          <p>What about the documentation? Fortunately <a href="http://godoc.org/" target="_blank">GoDoc</a> uses <kbd>go get</kbd>. Just go to <a href="http://godoc.org/gopkg.cc/codegangsta/martini/v0.1" target="_blank">godoc.org/gopkg.cc/codegangsta/martini/v0.1</a>.</p>
+
         </div>
       </div>
 
