@@ -1,0 +1,46 @@
+html,body{
+  height: 100%
+}
+
+#holder{
+  min-height: 100%;
+  position:relative;
+}
+
+section .container {
+  padding-top: 50px;
+}
+
+section {
+  padding-bottom: 258px;    /* height of footer */
+}
+
+/*h1 .github-buttons {
+  display:inline-block;
+}
+h1 .github-buttons iframe{
+  display: block;
+  margin-top: 6px;
+}*/
+
+.gopkg-header {
+  text-align: center;
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 50px;
+  margin: 0;
+}
+
+a.btn img {
+  height: 22px;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+footer {
+  height: 208px;
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
